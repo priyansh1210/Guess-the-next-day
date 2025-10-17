@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Next Day</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🗓️ Guess the Next Day</h1>
+        <p>Select a day and let our super-advanced AI figure out what comes next!</p>
+        
+        <div class="selection-area">
+            <label for="daySelect">Choose a day:</label>
+            <select id="daySelect">
+                <option value="">-- Select a day --</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+            <button id="guessBtn" onclick="startGuessing()">Guess Next Day!</button>
+        </div>
+
+        <div id="loadingArea" class="loading-area hidden">
+            <div class="loading-spinner"></div>
+            <div id="loadingText" class="loading-text">Processing...</div>
+        </div>
+
+        <div id="resultArea" class="result-area hidden">
+            <h2>🎉 Result</h2>
+            <p>You selected: <span id="selectedDay"></span></p>
+            <p>The next day is: <span id="nextDay"></span></p>
+            <button onclick="resetApp()">Try Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
